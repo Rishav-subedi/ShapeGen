@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Shapes Manipulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="controls">
+    <div class="shape-selector">
+      <button id="addBoxButton">Add Box</button>
+      <button id="addCircleButton">Add Circle</button>
+    </div>
+    <label id="boxControls">
+      Height:
+      <input type="number" id="boxHeight" placeholder="Height (px)" min="10">
+      Width:
+      <input type="number" id="boxWidth" placeholder="Width (px)" min="10">
+    </label>
+    <label id="circleControls" style="display: none;">
+      Radius:
+      <input type="number" id="circleRadius" placeholder="Radius (px)" min="10">
+    </label>
+    <label>
+      Color:
+      <input type="color" id="shapeColor">
+    </label>
+    <button id="deleteButton" style="display: none;">Delete</button>
+    <button id="downloadButton">Download Viewport</button>
+  </div>
+  <div id="canvasContainer">
+    <div id="canvas"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

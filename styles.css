@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.controls {
+  position: fixed;
+  top: 10px;
+  left: 500px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 1000;
+  cursor: move;
+}
+
+.controls.dragging {
+  opacity: 0.8;
+  cursor: grabbing;
+}
+
+
+.shape-selector button {
+  margin-right: 10px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+button#deleteButton {
+  margin-top: 10px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#deleteButton:hover {
+  background-color: #d94343;
+}
+
+#canvas {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+
+.box {
+  position: absolute;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0 solid #ccc;
+}
+
+.circle {
+  position: absolute;
+  cursor: grab;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box:active,
+.circle:active {
+  cursor: grabbing;
+}
